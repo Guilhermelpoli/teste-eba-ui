@@ -1,0 +1,23 @@
+{
+  "name": "teste-eba-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guilhermelpoli/teste-eba-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guilhermelpoli/teste-eba-ui/issues"
+  },
+  "homepage": "https://github.com/Guilhermelpoli/teste-eba-ui#readme",
+  "devDependencies": {
+    "cypress": "^15.0.0"
+  }
+}
