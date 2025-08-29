@@ -1,9 +1,18 @@
 /// <reference types="cypress" />
 
 context('Funcionalidade Login', () =>{
-
-    it('Deve fazer login com sucesso', () => {
+    beforeEach(() => {
         cy.visit('https://www.saucedemo.com')
+        
+    });
+    
+    afterEach(() => {
+        cy.screenshot()
+        
+    });
+    
+    it('Deve fazer login com sucesso', () => {
+        
         cy.get('[data-test="username"]').type('standard_user')
         cy.get('[data-test="password"]').type('secret_sauce')
         cy.get('[data-test="login-button"]').click()
@@ -12,7 +21,7 @@ context('Funcionalidade Login', () =>{
     })
 
     it('Deve exibir uma mensagem de erro ao inserir usuario inválidos', () =>{
-        cy.visit('https://www.saucedemo.com')
+        
         cy.get('[data-test="username"]').type('standard_user_')
         cy.get('[data-test="password"]').type('secret_sauce')
         cy.get('[data-test="login-button"]').click() 
@@ -20,7 +29,7 @@ context('Funcionalidade Login', () =>{
         
     })
     it('Deve exibir uma mensagem de erro ao inserir senha inválidos', () =>{
-        cy.visit('https://www.saucedemo.com')
+        
         cy.get('[data-test="username"]').type('standard_user')
         cy.get('[data-test="password"]').type('secret_sauce_')
         cy.get('[data-test="login-button"]').click() 
